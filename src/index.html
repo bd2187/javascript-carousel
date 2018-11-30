@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- <link rel="stylesheet" href="./style.css" /> -->
+        <title>Document</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            .model {
+                width: 100%;
+                height: 100%;
+                display: block;
+                flex-shrink: 0;
+            }
+
+            .first {
+                background: red;
+            }
+
+            .second {
+                background: blue;
+            }
+
+            .third {
+                background: gold;
+            }
+
+            .fourth {
+                background: purple;
+            }
+
+            .carousel-container {
+                height: 100vh;
+                margin: 0 auto;
+                background: grey;
+                border: 5px solid black;
+                /* overflow: hidden; */
+            }
+
+            .carousel-slide {
+                display: flex;
+                flex: auto;
+                width: 100%;
+                height: 100vh;
+                background: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="model fourth" id="lastClone"></div>
+                <div class="model first"></div>
+                <div class="model second"></div>
+                <div class="model third"></div>
+                <div class="model fourth"></div>
+                <div class="model fourth" id="firstClone"></div>
+            </div>
+        </div>
+        <button id="prevBtn">Prev</button><button id="nextBtn">Next</button>
+        <script src="./app.js"></script>
+    </body>
+</html>
